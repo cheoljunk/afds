@@ -3,6 +3,6 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url('', include('polls.urls')),
+    url('', include('LoginForm.urls')),
     url('admin/', admin.site.urls),
 ]

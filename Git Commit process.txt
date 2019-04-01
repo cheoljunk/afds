@@ -1,0 +1,413 @@
+Microsoft Windows [Version 10.0.17134.648]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Iron Kim>cd mysite
+
+C:\Users\Iron Kim\mysite>git init
+Reinitialized existing Git repository in C:/Users/Iron Kim/mysite/.git/
+
+C:\Users\Iron Kim\mysite>git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Hello world.PNG
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Helloworld.PNG
+        "Html\354\227\260\352\262\260\352\263\274\354\240\225.PNG"
+        LoginForm.png
+        LoginForm/
+        polls.zip
+
+
+C:\Users\Iron Kim\mysite>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+C:\Users\Iron Kim\mysite>git add Helloworld.PNG
+
+C:\Users\Iron Kim\mysite>git add LoginForm
+
+C:\Users\Iron Kim\mysite>git add LoginForm.png
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Hello world.PNG
+        new file:   Helloworld.PNG
+        new file:   LoginForm.png
+        new file:   LoginForm/__init__.py
+        new file:   LoginForm/__pycache__/__init__.cpython-37.pyc
+        new file:   LoginForm/__pycache__/forms.cpython-37.pyc
+        new file:   LoginForm/__pycache__/urls.cpython-37.pyc
+        new file:   LoginForm/__pycache__/views.cpython-37.pyc
+        new file:   LoginForm/admin.py
+        new file:   LoginForm/apps.py
+        new file:   LoginForm/forms.py
+        new file:   LoginForm/login.html
+        new file:   LoginForm/migrations/__init__.py
+        new file:   LoginForm/models.py
+        new file:   LoginForm/tests.py
+        new file:   LoginForm/urls.py
+        new file:   LoginForm/views.py
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "Html\354\227\260\352\262\260\352\263\274\354\240\225.PNG"
+        polls.zip
+
+
+C:\Users\Iron Kim\mysite>
+C:\Users\Iron Kim\mysite>
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Hello world.PNG
+        new file:   Helloworld.PNG
+        new file:   LoginForm.png
+        new file:   LoginForm/__init__.py
+        new file:   LoginForm/__pycache__/__init__.cpython-37.pyc
+        new file:   LoginForm/__pycache__/forms.cpython-37.pyc
+        new file:   LoginForm/__pycache__/urls.cpython-37.pyc
+        new file:   LoginForm/__pycache__/views.cpython-37.pyc
+        new file:   LoginForm/admin.py
+        new file:   LoginForm/apps.py
+        new file:   LoginForm/forms.py
+        new file:   LoginForm/login.html
+        new file:   LoginForm/migrations/__init__.py
+        new file:   LoginForm/models.py
+        new file:   LoginForm/tests.py
+        new file:   LoginForm/urls.py
+        new file:   LoginForm/views.py
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Html_link.PNG
+        polls.zip
+
+
+C:\Users\Iron Kim\mysite>git add Html_link.PNG
+
+C:\Users\Iron Kim\mysite>git commit -m 로그인 창 구현
+error: pathspec '창' did not match any file(s) known to git
+error: pathspec '구현' did not match any file(s) known to git
+
+C:\Users\Iron Kim\mysite>git commit -m 로그인창구현
+[master e30c013] 로그인창구현
+ 18 files changed, 55 insertions(+)
+ create mode 100644 Hello world.PNG
+ create mode 100644 Helloworld.PNG
+ create mode 100644 Html_link.PNG
+ create mode 100644 LoginForm.png
+ create mode 100644 LoginForm/__init__.py
+ create mode 100644 LoginForm/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 LoginForm/__pycache__/forms.cpython-37.pyc
+ create mode 100644 LoginForm/__pycache__/urls.cpython-37.pyc
+ create mode 100644 LoginForm/__pycache__/views.cpython-37.pyc
+ create mode 100644 LoginForm/admin.py
+ create mode 100644 LoginForm/apps.py
+ create mode 100644 LoginForm/forms.py
+ create mode 100644 LoginForm/login.html
+ create mode 100644 LoginForm/migrations/__init__.py
+ create mode 100644 LoginForm/models.py
+ create mode 100644 LoginForm/tests.py
+ create mode 100644 LoginForm/urls.py
+ create mode 100644 LoginForm/views.py
+
+C:\Users\Iron Kim\mysite>git log
+commit e30c013cde15f30ddf27d84dbdfd3d6205a91949 (HEAD -> master)
+Author: CJ <cheoljunk@gmail.com>
+Date:   Mon Apr 1 21:01:31 2019 +0900
+
+    <EB><A1><9C><EA><B7><B8><EC><9D><B8><EC><B0><BD><EA><B5><AC><ED><98><84>
+
+commit 51192f61b5865273b536d6eafb5e341c15fdc0d4 (origin/master)
+Author: CJ <cheoljunk@gmail.com>
+Date:   Sun Mar 24 20:31:56 2019 +0900
+
+    <EC><9E><98> <ED><95><98><EA><B3><A0><EC><8B><B6><EB><8B><A4>
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        polls.zip
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        polls.zip
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Iron Kim\mysite>git push
+To https://github.com/cheoljunk/afds.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/cheoljunk/afds.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\Iron Kim\mysite>git push origin master
+To https://github.com/cheoljunk/afds.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/cheoljunk/afds.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\Iron Kim\mysite>git commit
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+Untracked files:
+        polls.zip
+
+no changes added to commit
+
+C:\Users\Iron Kim\mysite>git commit .
+Aborting commit due to empty commit message.
+
+C:\Users\Iron Kim\mysite>git add .
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    Hello world.PNG
+        modified:   mysite/__pycache__/urls.cpython-37.pyc
+        modified:   mysite/urls.py
+        new file:   polls.zip
+        deleted:    polls/__init__.py
+        deleted:    polls/__pycache__/__init__.cpython-37.pyc
+        deleted:    polls/__pycache__/urls.cpython-37.pyc
+        deleted:    polls/__pycache__/views.cpython-37.pyc
+        deleted:    polls/admin.py
+        deleted:    polls/apps.py
+        deleted:    polls/migrations/__init__.py
+        deleted:    polls/models.py
+        deleted:    polls/tests.py
+        deleted:    polls/urls.py
+        deleted:    polls/views.py
+
+
+C:\Users\Iron Kim\mysite>git commit
+Aborting commit due to empty commit message.
+
+C:\Users\Iron Kim\mysite>git commit -m
+error: switch `m' requires a value
+
+C:\Users\Iron Kim\mysite>git commit -m how
+[master 4b492d4] how
+ 15 files changed, 1 insertion(+), 28 deletions(-)
+ delete mode 100644 Hello world.PNG
+ create mode 100644 polls.zip
+ delete mode 100644 polls/__init__.py
+ delete mode 100644 polls/__pycache__/__init__.cpython-37.pyc
+ delete mode 100644 polls/__pycache__/urls.cpython-37.pyc
+ delete mode 100644 polls/__pycache__/views.cpython-37.pyc
+ delete mode 100644 polls/admin.py
+ delete mode 100644 polls/apps.py
+ delete mode 100644 polls/migrations/__init__.py
+ delete mode 100644 polls/models.py
+ delete mode 100644 polls/tests.py
+ delete mode 100644 polls/urls.py
+ delete mode 100644 polls/views.py
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\Iron Kim\mysite>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\Iron Kim\mysite>git push origin master
+To https://github.com/cheoljunk/afds.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/cheoljunk/afds.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\Iron Kim\mysite>git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/cheoljunk/afds
+ * branch            master     -> FETCH_HEAD
+   51192f6..25030f9  master     -> origin/master
+Merge made by the 'recursive' strategy.
+
+C:\Users\Iron Kim\mysite>git push origin master
+Enumerating objects: 31, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 99.72 KiB | 9.97 MiB/s, done.
+Total 23 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/cheoljunk/afds.git
+   25030f9..6785731  master -> master

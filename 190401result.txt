@@ -1,0 +1,73 @@
+#1 학습한 것
+
+1. HTML 파일 링크를 위해선 별도 경로에 파일을 넣어줘야한다.
+	-> HTML 링크를 막무가내로 하다보니 오류창이 뜨게되었고 그 과정에서 알게됨
+	-> 오류 파일 첨부(Html_link.PNG)
+
+2. 구현을 완료한 후 깃에 다시 커밋하는 과정에 대해서 학습함
+	-> 아직도 어떻게 정확히 Git이 돌아가는지 메커니즘에 대해서 학습할 필요가 있음
+	-> 커밋 과정파일 첨부(git commit process)
+	-> 경로에 들어가 'git init' 명령어 실행
+	-> 'git status' 명령어로 현재 상태 확인
+	-> 지워진 파일, 수정된 파일(Changes not staged for commit) && 새로 작성된 파일(Untracked files)로 구분됨
+	-> 'git add .' 명령어 실행시 모든 파일 추가 'git add [파일명]' 파일 하나하나 추가 폴더도 가능
+	-> add한 후 'git status' 실행시 new file [파일명]으로 커밋가능(?)한 파일이 나타남
+	-> 'git commit -m [메모]' 실행시 n files changed, n insertion(+)라고 뜸
+	-> 하지만 커밋된 상태가 아니다!!!!
+	-> 공부를 좀 더 해야겠지만 git 페이지에 커밋된 파일이 나타나려면
+	-> 'git pull origin master' 명령어로 업데이트(?)를 한 후에 'git push origin master'를 치게되면 git 사이트에서 확인이 가능했다.
+	-> git 사용은 두번째지만 처음인 것 처럼 새롭다. 공부를 하지 않으면 이 스터디가 끝날때까지 사용법을 제대로 숙지 못하고 끝날 듯하다.
+
+3. python 공부
+
+메인이되는 urls.py 에서 어떤 것을 호출할지 정한다.
+
+mysite.py
+================================
+	urlpatterns = [
+	    url('', include('LoginForm.urls')),
+	    url('admin/', admin.site.urls),
+	]
+================================
+#위 코드에서 LoginFrom.urls 를 호출 한다
+
+LoginForm/urls.py
+=================================
+urlpatterns = [
+    url(r'^', views.signin, name = 'LoginForm'),
+]
+=================================
+위 코드에서 views.signin함수를 호출하겠다고 선언한다.
+
+LoginForm/views.py
+=============================================
+def signin(request):
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username = username, password = password)
+        if user is not None:
+            login(request, user)
+            return redirect('index')
+        else:
+            return HttpResponse('로그인 실패. 다시 시도 해보세요.')
+    else:
+        form = LoginForm()
+        return render(request, 'memo_app/login.html', {'form': form})
+===============================================
+1번 학습한것에서 언급했듯이 return render로 경로를 지정해주고 그 필요한 파일을 찾아가는 구조이다.
+def는 함수를 선언하겠다 이런 뜻
+signin(request)는 request가 호출 되었을 때 이 함수를 호출한다.
+
+##추가 
+'from django.contrib.auth.models  import ~~~~~'
+이 어떤 식으로 구성되는 지 알고 사용할 필요가있음
+
+일단은 여기저기 코드에서 보고 사용하는 것을 따라하고 있으나
+학습을 위해서 검색을 해봐도 자세히 설명된 부분을 못찾아봄
+가능하다면 선배님들과 기초적인 문법에 대해서 학습하는 시간을 갖고싶습니다.
+
+
+
+

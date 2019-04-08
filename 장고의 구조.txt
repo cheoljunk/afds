@@ -1,0 +1,114 @@
+장고 기본 문법
+
+	models.py 구조
+
+	=============================
+	from django.db import models
+
+	# Create your models here.
+	=============================
+
+	
+	from django.db import models : 'django 에 있는 db 모듈에서(from django.db) models 이라는 모듈을 가져온다'는 뜻
+	
+	django 를 설치한 곳에 가보면 django 라는 디렉토리가 있다
+	그 안에 db 라는 디렉토리가 있으며, 그 안에 보면 models 라는 디렉토리가 있다. 
+	그 디렉토리 안의 모든 파이썬 파일을 가져오는 것
+
+	
+	Ex1)from django import db
+	->django 디렉토리의 DB 디렉토리를 가져 오는 것(하위 디렉토리까지 전부)
+
+	Ex2)from django.db.models import query
+	->django/db/models에 있는 query라는 파일 혹은 디렉토리를 가져온다.	
+
+
+장고는 프로젝트 안에 앱을 포함하는 구조
+	-> manage.py를 이용해 앱을 생성
+
+명령어 : $ django-admin startproject [전체 관리 프로젝트(?)]
+
+	Ex1) MyDjangoProject
+
+	수행 결과(디렉토리 구조)
+	=========================================
+	MyDjangoProject(전체 관리 프로젝트)/
+		manage.py
+		MyDjangoProject/
+			__init__.py
+			setting.py
+			urls.py
+			wsgi.py
+
+
+명령어 : $ python manage.py startapp [앱이름(클래스를 포함하는 음...프로젝트(?))]
+		-> 위 명령어로 앱을 생성했을때 models.py, admin.py, views.py 와 같은 것들이 생김
+		-> 위 명령어는 단순히 명령어로 앱을 생성할 뿐
+		-> Setting.py에 등록해야한다.
+	
+	Ex2) Login
+
+	Setting.py
+	=========================================
+	INSTALLED_APPS = (
+ 	   'django.contrib.auth',
+	   'django.contrib.contenttypes',
+	   'django.contrib.sessions',
+	   'django.contrib.sites',
+	   'Login',	
+	)	
+	=========================================
+
+	수행 결과(디렉토리 구조)
+	=========================================
+	MyDjangoProject(전체 관리 프로젝트)/
+		manage.py
+		MyDjangoProject/
+		Login/
+			/migrations
+				__init__.py
+				admin.py
+				models.py
+				tests.py
+				views.py
+
+
+	개인적인 생각 : 장고는 여러 프로젝트(비주얼 기준)를 하나로 묶어 관리해주는 느낌적인 느낌으로 이해함
+			그 프로젝트들을 앱(혹은 패키지)이라고 일반적으로 부르는 것처럼 보임(블로그에서 앱이라고 자주 언급함)
+
+		manage.py 는 프로젝트 관리 스크립트
+			앱을 생성, DB와 작업, 개발 웹 서버를 시작하기 위해 사용
+
+		__init__.py 는 빈파일, 이 파일은 Python에게 이 디렉토리를 하나의 Python 패키지로 다루도록 지시함
+
+		Setting.py 웹사이트의 설정을 포함. 만드는 App등록, DB 세부 설정 등을 기록함
+
+		urls.py 사이트의 url -view의 연결을 지정
+
+		wsgi.py 웹서버와 연결을 돕는다
+			
+		admin.py 는 장고 어드민에 어떠한 테이블을 출력할 것인지 기록함
+
+		models.py 는 앱의 자원을 모델링하고 이것이 DB와 연결됨
+		
+		migration 폴더는 모델을 수정할 때 마다 자동으로 데이터베이스를 업데이트
+
+
+
+
+#참고
+https://blog.hannal.com/2008/6/04_2-python_django_lecture/
+
+https://heiswed.tistory.com/entry/%EC%9E%A5%EA%B3%A0Django-%EA%B0%9C%EB%B0%9C-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC
+
+https://jamanbbo.tistory.com/28
+
+https://duzi077.tistory.com/126
+
+https://developer.mozilla.org/ko/docs/Learn/Server-side/Django/skeleton_website
+
+https://wayhome25.github.io/django/2017/05/02/CBV/
+
+
+#DB연동 
+http://jeonghwan-kim.github.io/%EA%B8%B0%EC%A1%B4-mysql%EC%97%90-%EC%9E%A5%EA%B3%A0-%EC%96%B4%EB%93%9C%EB%AF%BC-%EB%B6%99%EC%9D%B4%EA%B8%B0/

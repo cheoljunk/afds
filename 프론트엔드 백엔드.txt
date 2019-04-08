@@ -1,0 +1,52 @@
+프론트엔드 : 프론트엔드는 웹사이트 중 사용자가 직접 상호작용을 하게 되는 부분입니다.
+
+인터넷에서 보게 되는 모든 것들은 브라우저의 제어를 받는 HTML, CSS 및 JavaScript의 조합
+
+프론트엔드 프레임 워크 : Bootstrap, Foundation, Backbone, AngularJS, EmberJS
+
+Ajax : 백그라운드에서 서버 데이터를 가져와 페이지를 동적으로 만드는 JavaScript를 활용하는 데 있어서 Ajax는 보편적으로 사용되는 기술
+
+
+백엔드 : 프론트엔드 자체를 가능하게 하는 것(ex. 데이터 저장)
+
+PHP, Ruby, Python, Java, .Net과 같은 서버 측 언어를 활용
+
+데이터를 관련 내용을 프론트엔드 코드로 사용자에게 다시 제공하기 위해서는 MySQL, Oracle 및 SQL Server를 사용
+
+
+
+
+프레임워크 : 
+
+	-> Node.js : javaScript 기반 그렇기 때문에 프론트, 백엔드 두가지를 한번에 하기에 쉽다
+	
+	-> Rail : Ruby와 함께 사용 속도를 얻은 대신 기능제한
+
+	-> DJango : Python를 사용해서 백엔드를 구축할 수 있도록 만들어짐(Node.js 와 같이 한번에 두마리 토끼 가능 그 말은 못하면 흐지부지와 같다)
+
+	-> Angular JS : javaScript 기반 브라우저 기반의 앱 개발용 프레임워크, 구글 주도 개발 사용하는 모든 것이 표준에 가까움
+
+	Etc.
+
+프레임워크 종류
+
+
+
+
+구분						종류 
+ 
+
+자바 프레임워크					Struts, Spring, 전자정부 프레임워크 
+ 
+
+QRM 프레임워크 					myBatis(iBatis), Hibernate 
+ 
+
+자바스크립트 프레임워크 			AngularJS, React, Polymer, Ember 
+ 
+
+프론트엔드 프레임워크 				Bootstrap, Foundation, MDL 
+ 
+
+
+https://brunch.co.kr/@jowlee/44
